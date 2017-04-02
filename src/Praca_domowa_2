@@ -1,0 +1,4 @@
+Proszę wczytać plik tekstowy (CSV) zawierający zapis gry
+w kółko i krzyżyk (np. 1 i -1 dla oznaczenia X i O) i odpowiedzieć
+na pytanie czy gra jeszcze się toczy, a jeśli już nie to czy
+jest zwycięzca i kto nim jest.
