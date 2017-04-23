@@ -10,5 +10,9 @@ public class OperNaFigurach {
         String opis = f1.toString();
         System.out.println(opis);
 
+        Prostokat p1 = new Prostokat(4,6);
+        double pole = p1.policzPole();
+        System.out.println("Pole p1: " + pole);
+
     }
 }
