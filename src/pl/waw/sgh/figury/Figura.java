@@ -23,7 +23,7 @@ public class Figura {
 
     @Override
     public String toString() {
-        return "Figura{" +
+        return this.getClass().getSimpleName() + "{" +
                 "parA=" + parA +
                 ", parB=" + parB +
                 '}';

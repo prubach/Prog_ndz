@@ -12,7 +12,12 @@ public class OperNaFigurach {
 
         Prostokat p1 = new Prostokat(4,6);
         double pole = p1.policzPole();
+        System.out.println(p1.toString());
         System.out.println("Pole p1: " + pole);
+
+        Kolo k1 = new Kolo(2);
+        double poleKola = k1.policzPole();
+        System.out.println("Pole k1: " + poleKola);
 
     }
 }
