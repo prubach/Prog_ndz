@@ -3,7 +3,7 @@ package pl.waw.sgh.figury;
 /**
  * Created by prubac on 23.04.2017.
  */
-public class Figura {
+public abstract class Figura {
 
     double parA;
     double parB;
@@ -20,6 +20,8 @@ public class Figura {
         this.parA = parA;
         this.parB = parB;
     }
+
+    public abstract double policzPole();
 
     @Override
     public String toString() {

@@ -6,9 +6,10 @@ package pl.waw.sgh.figury;
 public class OperNaFigurach {
 
     public static void main(String[] args) {
-        Figura f1 = new Figura();
+        /*Figura f1 = new Figura();
         String opis = f1.toString();
         System.out.println(opis);
+        */
 
         Prostokat p1 = new Prostokat(4,6);
         double pole = p1.policzPole();
