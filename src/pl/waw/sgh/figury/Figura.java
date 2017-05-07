@@ -3,7 +3,7 @@ package pl.waw.sgh.figury;
 /**
  * Created by prubac on 23.04.2017.
  */
-public abstract class Figura {
+public abstract class Figura implements Comparable<Figura> {
 
     double parA;
     double parB;
@@ -29,5 +29,12 @@ public abstract class Figura {
                 "parA=" + parA +
                 ", parB=" + parB +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Figura figura) {
+        Double mojePole = policzPole();
+        Double innePole = figura.policzPole();
+        return mojePole.compareTo(innePole);
     }
 }
