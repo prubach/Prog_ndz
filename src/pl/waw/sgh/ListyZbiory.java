@@ -33,9 +33,15 @@ public class ListyZbiory {
         zbior.add(3535.45);
         zbior.add(3866.45);
 
+        for (Long ll : listaL)
+            zbior.add(Double.valueOf(ll));
+
+        Double suma = 0d;
         for (Double d : zbior){
             System.out.println(d);
+            suma += d;
         }
+        System.out.println("suma: " + suma);
 
 
 
