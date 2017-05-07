@@ -22,6 +22,16 @@ public abstract class Konto {
 
     private BigDecimal kwota;
 
+    // TODO Dokończyć
+    public void uznanie(BigDecimal kwUznania) {
+
+    }
+
+    // TODO Dokończyć
+    public void obciazenie(BigDecimal kwObciaz) {
+
+    }
+
     public Long getKontoId() {
         return kontoId;
     }
@@ -56,11 +66,11 @@ public abstract class Konto {
 
     @Override
     public String toString() {
-        return "Konto{" +
-                "kontoId=" + kontoId +
-                ", waluta='" + waluta + '\'' +
-                ", klient=" + klient +
-                ", kwota=" + kwota +
+        return this.getClass().getSimpleName() +"{" +
+                "id=" + kontoId +
+                ", " + waluta +
+                ", klID=" + klient.getKlientId() +
+                ", " + kwota +
                 '}';
     }
 }

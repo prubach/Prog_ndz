@@ -1,5 +1,6 @@
 package pl.waw.sgh.bank;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,18 @@ public class Bank {
     private Long ostKlientId = 1L;
 
     private Long ostKontoId = 1L;
+
+    // TODO Dokończyć
+    public void przelew(Long nrKontaZrod, Long nrKontaCel, BigDecimal kwota) {
+
+    }
+
+    // TODO Dokończyć
+    private Konto znajdzKonto(Long nrKonta) {
+
+        return null;
+    }
+
 
     public Klient stworzKlienta(String imie, String nazwisko) {
         Klient nowyKlient = new Klient(ostKlientId, imie, nazwisko);
@@ -47,9 +60,9 @@ public class Bank {
     @Override
     public String toString() {
         return "Bank{" +
-                "klientList=" + klientList +
-                ", kontoList=" + kontoList +
-                ", ostKlientId=" + ostKlientId +
+                "klienci=" + klientList +
+                "\nkonta=" + kontoList +
+                "\nostKlientId=" + ostKlientId +
                 ", ostKontoId=" + ostKontoId +
                 '}';
     }
