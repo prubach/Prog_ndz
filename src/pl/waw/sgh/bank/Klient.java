@@ -43,7 +43,7 @@ public class Klient {
 
     @Override
     public String toString() {
-        return "Klient{" +
+        return "KlientUI{" +
                 "klientId=" + klientId +
                 ", imie='" + imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +
