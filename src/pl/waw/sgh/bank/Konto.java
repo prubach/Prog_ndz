@@ -1,5 +1,7 @@
 package pl.waw.sgh.bank;
 
+import pl.waw.sgh.bank.exception.BrakSrodkowException;
+
 import java.math.BigDecimal;
 
 /**
@@ -26,7 +28,11 @@ public abstract class Konto {
         kwota = kwota.add(kwUznania);
     }
 
-    public void obciazenie(BigDecimal kwObciaz) {
+    public void obciazenie(BigDecimal kwObciaz)
+            throws BrakSrodkowException {
+        if (kwObciaz.compareTo(kwota)>0)
+            throw new BrakSrodkowException("Brak srodków, żądano: "
+                    + kwObciaz + " dostępne: " + kwota);
         kwota = kwota.subtract(kwObciaz);
     }
 

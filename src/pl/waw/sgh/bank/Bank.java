@@ -1,5 +1,7 @@
 package pl.waw.sgh.bank;
 
+import pl.waw.sgh.bank.exception.BrakSrodkowException;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,9 @@ public class Bank {
 
     private Long ostKontoId = 1L;
 
-    public void przelew(Long nrKontaZrod, Long nrKontaCel, BigDecimal kwota) {
+    public void przelew(Long nrKontaZrod, Long nrKontaCel,
+                        BigDecimal kwota)
+            throws BrakSrodkowException {
         Konto kontoZrod = znajdzKonto(nrKontaZrod);
         Konto kontoCel = znajdzKonto(nrKontaCel);
         kontoZrod.obciazenie(kwota);
