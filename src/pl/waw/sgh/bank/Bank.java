@@ -1,5 +1,6 @@
 package pl.waw.sgh.bank;
 
+import pl.waw.sgh.bank.exception.BrakKontaException;
 import pl.waw.sgh.bank.exception.BrakSrodkowException;
 
 import java.math.BigDecimal;
@@ -25,19 +26,20 @@ public class Bank {
 
     public void przelew(Long nrKontaZrod, Long nrKontaCel,
                         BigDecimal kwota)
-            throws BrakSrodkowException {
+            throws BrakSrodkowException, BrakKontaException {
         Konto kontoZrod = znajdzKonto(nrKontaZrod);
         Konto kontoCel = znajdzKonto(nrKontaCel);
         kontoZrod.obciazenie(kwota);
         kontoCel.uznanie(kwota);
     }
 
-    private Konto znajdzKonto(Long nrKonta) {
+    private Konto znajdzKonto(Long nrKonta)
+            throws BrakKontaException {
         for (Konto k : kontoList) {
             if (nrKonta.equals(k.getKontoId()))
                 return k;
         }
-        return null;
+        throw new BrakKontaException("Brak konta o nr: " + nrKonta);
     }
 
 

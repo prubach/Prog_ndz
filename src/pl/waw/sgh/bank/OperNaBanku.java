@@ -1,6 +1,8 @@
 package pl.waw.sgh.bank;
 
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import pl.waw.sgh.bank.exception.BankException;
+import pl.waw.sgh.bank.exception.BrakKontaException;
 import pl.waw.sgh.bank.exception.BrakSrodkowException;
 
 import java.math.BigDecimal;
@@ -30,9 +32,23 @@ public class OperNaBanku {
         try {
             bank.przelew(30L, 1L, new BigDecimal(100));
             System.out.println(bank);
-        } catch (BrakSrodkowException be) {
+        } /*catch (BrakSrodkowException | BrakKontaException be) {
+            System.out.println(be.getMessage());
+        } */
+
+        catch (BankException be) {
             System.out.println(be.getMessage());
         }
+
+/*
+        catch (Exception be) {
+            System.out.println(be.getMessage());
+        }
+*/
+
+        /*catch (BrakKontaException be) {
+            System.out.println(be.getMessage());
+        }*/
 
     }
 }
