@@ -22,14 +22,12 @@ public abstract class Konto {
 
     private BigDecimal kwota;
 
-    // TODO Dokończyć
     public void uznanie(BigDecimal kwUznania) {
-
+        kwota = kwota.add(kwUznania);
     }
 
-    // TODO Dokończyć
     public void obciazenie(BigDecimal kwObciaz) {
-
+        kwota = kwota.subtract(kwObciaz);
     }
 
     public Long getKontoId() {

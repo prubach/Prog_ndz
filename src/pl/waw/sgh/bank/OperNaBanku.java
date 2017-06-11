@@ -17,9 +17,9 @@ public class OperNaBanku {
 
         Konto k4 = bank.otworzKonto(Bank.KONTO_OSZCZ, kl2);
 
+
+
         System.out.println(bank);
-
-
 
     }
 }

@@ -21,14 +21,18 @@ public class Bank {
 
     private Long ostKontoId = 1L;
 
-    // TODO Dokończyć
     public void przelew(Long nrKontaZrod, Long nrKontaCel, BigDecimal kwota) {
-
+        Konto kontoZrod = znajdzKonto(nrKontaZrod);
+        Konto kontoCel = znajdzKonto(nrKontaCel);
+        kontoZrod.obciazenie(kwota);
+        kontoCel.uznanie(kwota);
     }
 
-    // TODO Dokończyć
     private Konto znajdzKonto(Long nrKonta) {
-
+        for (Konto k : kontoList) {
+            if (nrKonta.equals(k.getKontoId()))
+                return k;
+        }
         return null;
     }
 
